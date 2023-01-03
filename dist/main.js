@@ -1,1 +1,1 @@
-console.log("testi");
+document.querySelector(".city-button").addEventListener("click",(function(){let e=document.querySelector(".city-input").value;document.querySelector(".city-input").value="",console.log(e)}));
