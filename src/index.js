@@ -9,9 +9,17 @@ cityButton.addEventListener('click', function() {
   document.querySelector('.city-input').value = '';
 
   console.log(city);
+
+  getWeatherData(city);
 })
 
+function getWeatherData(city) {
 
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'})
+    .then(function(response) {
+      console.log(response.json());
+    });
+}
 
 
 /*

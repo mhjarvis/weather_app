@@ -1,1 +1,1 @@
-document.querySelector(".city-button").addEventListener("click",(function(){let e=document.querySelector(".city-input").value;document.querySelector(".city-input").value="",console.log(e)}));
+document.querySelector(".city-button").addEventListener("click",(function(){let e=document.querySelector(".city-input").value;document.querySelector(".city-input").value="",console.log(e),function(e){fetch(`https://api.openweathermap.org/data/2.5/weather?q=${e}&APPID=bb240cca395c22bffedb2a9a6e9daa71`,{mode:"cors"}).then((function(e){console.log(e.json())}))}(e)}));
