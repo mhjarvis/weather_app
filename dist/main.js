@@ -34,6 +34,8 @@ function getWeatherData(city) {
     })
     .then(function(response) {
       console.log(response.main)
+      document.querySelector('.city-name').innerHTML = response.name;
+      document.querySelector('.current-temperature').innerHTML = `${response.main.temp} &#xb0;F`;
     })
 }
 
