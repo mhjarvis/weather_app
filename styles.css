@@ -34,7 +34,9 @@ body {
 
 main {
   min-width: 70rem;
-  min-height: 100rem;
+  min-height: 0rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 4fr;
 }
 
 /*************************************/ 
@@ -70,3 +72,10 @@ button {
   margin-left: 2rem;
 }
 
+section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
