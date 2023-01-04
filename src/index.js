@@ -5,7 +5,6 @@ getWeatherData('Huntsville');
 // Event Listeners
 const cityButton = document.querySelector('.city-button');
 
-
 cityButton.addEventListener('click', function() {
 
   let city = document.querySelector('.city-input').value;
@@ -29,9 +28,18 @@ function getWeatherData(city) {
     })
     .then(function(response) {
       console.log(response.main)
-      document.querySelector('.city-name').innerHTML = response.name;
-      document.querySelector('.current-temperature').innerHTML = `${response.main.temp} &#xb0;F`;
+      console.log(response);
+      document.querySelector('.city-name').innerHTML = `${response.name} Weather Status`;
+      document.querySelector('.current-temperature').innerHTML = `${convertToFarenheit(response.main.temp)} &#xb0;F`;
     })
+}
+
+// Kelvin to Farenheit conversion
+
+function convertToFarenheit(temp) {
+  temp = (temp - 273.15) * 9;
+  temp = (temp / 5) + 32;
+  return parseInt(temp);
 }
 
 
