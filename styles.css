@@ -16,12 +16,10 @@
   font-family: 'Lora', serif;
 
     /* Colors */
-    --blue: #1d71f2;
-    --button-blue: #1c9cf6;
-    --disc-blue: #19c3fb;
-    --bubbles: #e3f4fe;
-    --cornsilk: #fffae0;
-    --tangerine: #ffcd00;
+    --green-mountain: #3d7c47;
+    --blue-mountain: #09868b;
+    --light-blue: #76c1d4;
+    --barely-gray: #f7f7f7;
 }
 
 body {
@@ -30,7 +28,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-color: var(--blue);
+  background-color: var(--barely-gray);
 }
 
 main {
@@ -38,7 +36,7 @@ main {
   min-height: 0rem;
   display: grid;
   grid-template-rows: 1fr 1fr 4fr;
-  background-color: var(--button-blue);
+  background-color: white;
   border-radius: 24px;
 }
 
@@ -115,7 +113,7 @@ section {
 }
 
 .additional-info > p {
-  background-color: var(--disc-blue);
+  background-color: var(--light-blue);
   padding: 0.5rem 2rem;
   border-radius: 16px;
   max-height: 4rem;
