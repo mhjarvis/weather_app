@@ -24,11 +24,13 @@
 
 body {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  background-color: var(--barely-gray);
+  background-image: url('/src/images/nature.jpg');
+  background-size: cover;
 }
 
 main {
@@ -36,8 +38,9 @@ main {
   min-height: 0rem;
   display: grid;
   grid-template-rows: 1fr 1fr 4fr;
-  background-color: white;
+  background-color: none;
   border-radius: 24px;
+
 }
 
 /*************************************/ 
@@ -109,7 +112,9 @@ section {
 }
 
 .current-time {
-  font-size: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--barely-gray);
 }
 
 .additional-info > p {
