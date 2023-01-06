@@ -20,17 +20,19 @@ cityButton.addEventListener('click', function() {
 function getWeatherData(city) {
 
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'}) 
-/*     .then(function(response) {
-      console.log(response.json())
-    }) */
     .then(function(response) {
       return response.json()
     })
     .then(function(response) {
       console.log(response.main)
       console.log(response);
+      console.log(response.weather)
       document.querySelector('.city-name').innerHTML = `${response.name} Weather Status`;
       document.querySelector('.current-temperature').innerHTML = `${convertToFarenheit(response.main.temp)} &#xb0;F`;
+      document.querySelector('.feels-like').innerHTML = `feels like: ${convertToFarenheit(response.main.feels_like)}&#xb0;F`;
+      document.querySelector('.cloud-info').innerHTML = response.weather[0].description;
+      document.querySelector('.humidity').innerHTML = `humidity: ${response.main.humidity}%`;
+      document.querySelector('.sunrise')
     })
 }
 
