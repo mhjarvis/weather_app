@@ -118,8 +118,20 @@ section {
 }
 
 /*************************************/ 
-/************** SECTION **************/
+/************** NEXT-24 **************/
 /*************************************/ 
+
+.next-24 {
+  width: 90%;
+  height: 20rem;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.next-24 div {
+
+}
 
 footer {
   display: flex;
