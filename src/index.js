@@ -32,7 +32,7 @@ function getWeatherData(city) {
       document.querySelector('.feels-like').innerHTML = `feels like: ${convertToFarenheit(response.main.feels_like)}&#xb0;F`;
       document.querySelector('.cloud-info').innerHTML = response.weather[0].description;
       document.querySelector('.humidity').innerHTML = `humidity: ${response.main.humidity}%`;
-      document.querySelector('.sunrise').innerHTML = `sunrise: ${}`
+
     })
 }
 
@@ -47,8 +47,12 @@ function convertToFarenheit(temp) {
 // Unix UTC conversion
 console.log(format_time(1673045382));
 
-function format_time(s) {
-  return new Date(s * 1e3).toISOString().slice(-13, -8);
+function format_time(UNIX_timestamp){
+  let a = new Date(UNIX_timestamp * 1000);
+  let hour = a.getHours();
+  let min = a.getMinutes();
+  let time = hour + ':' + min;
+  return time;
 }
 
 
