@@ -1,6 +1,7 @@
 // api key bb240cca395c22bffedb2a9a6e9daa71
 
-getWeatherData('Huntsville');
+getCurrentWeather('Huntsville');
+getForcast('Huntsville');
 
 // Event Listeners
 const cityButton = document.querySelector('.city-button');
@@ -12,18 +13,28 @@ cityButton.addEventListener('click', function() {
 
   console.log(city);
 
-  getWeatherData(city);
+  getCurrentWeather(city);
 })
 
+function getForcast(city) {
+  fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'}) 
+    .then(function(response) {
+      return response.json()
+    })
+    .then(function(response) {
+      console.log(response);
+    })
+}
 
 // api call
-function getWeatherData(city) {
+function getCurrentWeather(city) {
 
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'}) 
     .then(function(response) {
       return response.json()
     })
     .then(function(response) {
+      console.log(response)
       document.querySelector('.city-name').innerHTML = `${response.name} Weather Status`;
       document.querySelector('.current-temperature').innerHTML = `${convertToFarenheit(response.main.temp)} &#xb0;F`;
       document.querySelector('.feels-like').innerHTML = `feels like: ${convertToFarenheit(response.main.feels_like)}&#xb0;F`;
