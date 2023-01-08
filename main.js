@@ -27,6 +27,7 @@ function getForcast(city) {
       return response.json()
     })
     .then(function(response) {
+      forcast(response);
       console.log(response);
     })
 }
@@ -54,5 +55,27 @@ function convertToFarenheit(temp) {
   temp = (temp / 5) + 32;
   return parseInt(temp);
 }
+
+/// Populate forcast
+
+function forcast(data) {
+  for(let i = 0; i < 6; i++) {
+
+    const container = document.querySelector(`.f${i}`);
+    
+    const time = document.createElement('p');
+    time.classList.add('.time');
+    time.innerHTML = data.list[i];
+    container.appendChild(time);
+
+    console.log(data.list[i].dt_txt);
+
+
+    
+
+
+    
+  }
+} 
 /******/ })()
 ;
