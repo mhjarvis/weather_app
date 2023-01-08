@@ -1,3 +1,6 @@
+import fromUnixTime from 'date-fns/fromUnixTime'
+
+
 // api key bb240cca395c22bffedb2a9a6e9daa71
 
 getCurrentWeather('Huntsville');
@@ -63,12 +66,13 @@ function forcast(data) {
     time.innerHTML = data.list[i];
     container.appendChild(time);
 
-    console.log(data.list[i].dt_txt);
+    //console.log(data.list[i].dt_txt);
 
-
-    
-
+    console.log(fromUnixTime(data.list[i].dt_txt));
 
     
+
+
+
   }
 } 
