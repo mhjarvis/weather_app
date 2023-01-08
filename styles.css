@@ -127,6 +127,8 @@ section {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  color: white;
+  font-size: 2rem;
 }
 
 .next-24 div {
