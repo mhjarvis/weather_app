@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Manrope:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;600;900&display=swap');
+
 
 /*************************************/ 
 /************** GENERAL **************/
@@ -13,7 +14,7 @@
 :root {
 
   font-size: 10px;
-  font-family: 'Lora', serif;
+  font-family: montserrat,sans-serif;
 
     /* Colors */
     --green-mountain: #3d7c47;
@@ -133,18 +134,24 @@ section {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 2rem;
   color: white;
   font-size: 2rem;
 }
 
 .next-24 div {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+
+  
 }
 
 .next-24 div p {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  
 }
 
 footer {
