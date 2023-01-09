@@ -28,7 +28,7 @@ body {
   grid-template-rows: 2fr 7fr 1fr;
   min-height: 100vh;
   width: 100%;
-  background-image: url('/src/images/mountains.jpg');
+  background-image: url('https://github.com/mhjarvis/weather_app/blob/main/src/images/mountains.jpg?raw=true');
   background-size: cover;
 }
 
