@@ -1,6 +1,3 @@
-import fromUnixTime from 'date-fns/fromUnixTime'
-import getDay from 'date-fns/getDay'
-
 // api key bb240cca395c22bffedb2a9a6e9daa71
 
 getCurrentWeather('Huntsville');
@@ -18,6 +15,8 @@ cityButton.addEventListener('click', function() {
 
   getCurrentWeather(city);
 })
+
+
 
 function getForcast(city) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'}) 
@@ -77,11 +76,8 @@ function forcast(data) {
     // Set cloud reading
     const cloud = document.createElement('p');
     cloud.classList.add('.cloud-cover');
-    temp.inner
-
-/*     console.log(newTime.getHours())
-    console.log(newTime.getMinutes()) */
-
+    cloud.innerHTML = `${data.list[i].weather[0].description}`;
+    container.appendChild(cloud);
 
   }
 } 
