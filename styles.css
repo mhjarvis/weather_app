@@ -8,8 +8,8 @@
 * {
   margin: 0;
   padding: 0;
-  outline: 1px solid red;
-}
+/*   outline: 1px solid red;
+ */}
 
 :root {
 
@@ -28,7 +28,7 @@ body {
   grid-template-rows: 2fr 7fr 1fr;
   min-height: 100vh;
   width: 100%;
-  background-image: url('/src/images/nature.jpg');
+  background-image: url('/src/images/mountains.jpg');
   background-size: cover;
 }
 
@@ -125,37 +125,35 @@ section {
 }
 
 /*************************************/ 
-/************** NEXT-24 **************/
+/************** FORCAST **************/
 /*************************************/ 
 
 .next-24 {
   width: 90%;
-  height: 20rem;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  column-gap: 2rem;
+  display: flex;
+  flex-direction: column;
   color: white;
+}
+
+.forcast-title {
+  font-size: 4rem;
+}
+
+.forcast-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   font-size: 2rem;
 }
 
-.next-24 div {
-  display: flex;
-  flex-direction: column;
 
-  
-}
-
-.next-24 div p {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  
-}
+/*************************************/ 
+/************** FOOTER ***************/
+/*************************************/ 
 
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
