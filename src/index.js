@@ -69,6 +69,15 @@ function forcast(data) {
     container.appendChild(time);
 
     // Set temperature forcast
+    const temp = document.createElement('p');
+    temp.classList.add('.forcast-temp');
+    temp.innerHTML = `${convertToFarenheit(data.list[i].main.temp)}&#xb0;F`;
+    container.appendChild(temp);
+
+    // Set cloud reading
+    const cloud = document.createElement('p');
+    cloud.classList.add('.cloud-cover');
+    temp.inner
 
 /*     console.log(newTime.getHours())
     console.log(newTime.getMinutes()) */
