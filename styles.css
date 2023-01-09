@@ -82,8 +82,14 @@ section {
 }
 
 .city-name {
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 700;
+}
+
+.current-temperature {
+  color: black;
+  font-size: 5rem;
+  font-weight: 900;
 }
 
 .current-weather-container {
@@ -132,7 +138,13 @@ section {
 }
 
 .next-24 div {
+  display: grid;
+}
 
+.next-24 div p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
