@@ -1,5 +1,5 @@
 import fromUnixTime from 'date-fns/fromUnixTime'
-
+import getDay from 'date-fns/getDay'
 
 // api key bb240cca395c22bffedb2a9a6e9daa71
 
@@ -60,18 +60,18 @@ function forcast(data) {
   for(let i = 0; i < 6; i++) {
 
     const container = document.querySelector(`.f${i}`);
-    
+
+    // Set forcast time range
     const time = document.createElement('p');
+    let newTime = new Date(data.list[i].dt * 1000); 
     time.classList.add('.time');
-    time.innerHTML = data.list[i];
+    time.innerHTML = `${newTime.getHours()}:00 - ${newTime.getHours() + 3}:00`
     container.appendChild(time);
 
-    //console.log(data.list[i].dt_txt);
+    // Set temperature forcast
 
-    console.log(fromUnixTime(data.list[i].dt_txt));
-
-    
-
+/*     console.log(newTime.getHours())
+    console.log(newTime.getMinutes()) */
 
 
   }
