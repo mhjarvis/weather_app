@@ -1,10 +1,10 @@
 // Default
-
 getCurrentWeather('Huntsville');
 getForcast('Huntsville');
+setTime();
 
 
-
+setInterval(setTime, 1000);
 // Event Listener for button
 const cityButton = document.querySelector('.city-button');
 
@@ -17,8 +17,6 @@ cityButton.addEventListener('click', function() {
 
   getCurrentWeather(city);
 })
-
-
 
 function getForcast(city) {
   fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=bb240cca395c22bffedb2a9a6e9daa71`, {mode: 'cors'}) 
@@ -83,6 +81,7 @@ function forcast(data) {
 // Get time
 function setTime() {
   let date = new Date();
-  let time = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
-  return time;
+  let time = `${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+
+  document.querySelector('.current-time').innerHTML = time;
 }
