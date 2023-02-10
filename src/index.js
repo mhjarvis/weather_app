@@ -36,6 +36,7 @@ function getCurrentWeather(city) {
       return response.json()
     })
     .then(function(response) {
+      console.log(response)
       document.querySelector('.city-name').innerHTML = `${response.name} Weather Status`;
       document.querySelector('.current-temperature').innerHTML = `${convertToFarenheit(response.main.temp)} &#xb0;F`;
       document.querySelector('.feels-like').innerHTML = `feels like: ${convertToFarenheit(response.main.feels_like)}&#xb0;F`;
